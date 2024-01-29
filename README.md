@@ -36,23 +36,17 @@ chunk(['a', 'b', 'c', 'd'], 2);
 ### compact
 
 ```js
-// 📦 1.87 kB (gzip)
-import chunk from 'lodash/chunk';
+// 📦 426 kB (gzip)
+// 🚀 5,52 kHz
+import compact from 'lodash/compact';
 
 compact([0, 1, false, 2, '', 3]);
 ```
 
 ```js
-// 📦 117 B (gzip), -94%
-const chunk = (input, size) => {
-  return input.reduce((arr, item, idx) => {
-    return idx % size === 0
-      ? [...arr, [item]]
-      : [...arr.slice(0, -1), [...arr.slice(-1)[0], item]];
-  }, []);
-};
-
-chunk(['a', 'b', 'c', 'd'], 2);
+// 📦 53 B (gzip), -87% smaller 👍
+// 🚀 14,5 kHz, 263% faster 👍
+[0, 1, false, 2, '', 3].filter(Boolean);
 ```
 
 ## Collection
