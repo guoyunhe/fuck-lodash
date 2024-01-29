@@ -13,9 +13,9 @@ A good lodash function alternative should be both **smaller** and **faster**. In
 
 ### chunk
 
-```js
+```js file
 // 📦 1.87 kB (gzip)
-// 🚀 5,24 mHz
+// 🚀 5.24 mHz
 import chunk from 'lodash/chunk';
 
 chunk(['a', 'b', 'c', 'd'], 2);
@@ -23,7 +23,7 @@ chunk(['a', 'b', 'c', 'd'], 2);
 
 ```js
 // 📦 126 B (gzip), 93% smaller 👍
-// 🚀 7,41 mHz, 20% slower 👍
+// 🚀 7.41 mHz, 20% slower 👍
 const chunk = (arr, chunkSize = 1, cache = []) => {
   const tmp = [...arr];
   if (chunkSize <= 0) return cache;
@@ -38,7 +38,7 @@ chunk(['a', 'b', 'c', 'd'], 2);
 
 ```js
 // 📦 426 B (gzip)
-// 🚀 5,52 mHz
+// 🚀 5.52 mHz
 import compact from 'lodash/compact';
 
 compact([0, 1, false, 2, '', 3]);
@@ -46,7 +46,7 @@ compact([0, 1, false, 2, '', 3]);
 
 ```js
 // 📦 53 B (gzip), 87% smaller 👍
-// 🚀 14,5 mHz, 163% faster 👍
+// 🚀 14.5 mHz, 163% faster 👍
 [0, 1, false, 2, '', 3].filter(Boolean);
 ```
 
@@ -54,7 +54,7 @@ compact([0, 1, false, 2, '', 3]);
 
 ```js
 // 📦 1.27 kB (gzip)
-// 🚀 1,96 mHz
+// 🚀 1.96 mHz
 import concat from 'lodash/concat';
 
 concat([1], 2, [3], [[4]]);
@@ -62,7 +62,7 @@ concat([1], 2, [3], [[4]]);
 
 ```js
 // 📦 45 B (gzip), 96% smaller 👍
-// 🚀 3,63 mHz, 85% faster 👍
+// 🚀 3.63 mHz, 85% faster 👍
 [1].concat(2, [3], [[4]]);
 ```
 
@@ -74,13 +74,15 @@ concat([1], 2, [3], [[4]]);
 
 ```js
 // 📦 483 B (gzip)
+// 🚀 4.95 mHz
 import now from 'lodash/now';
 
 now();
 ```
 
 ```js
-// 📦 32 B (gzip)
+// 📦 32 B (gzip), 93% smaller 👍
+// 🚀 11.4 mHz, 131% faster 👍
 Date.now();
 ```
 
