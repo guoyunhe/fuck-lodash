@@ -13,5 +13,5 @@
     "types": ["rive/globals"],
     "jsx": "react-jsx",
   },
-  "include": ["tests"],
+  "include": ["src", "tests"],
 }

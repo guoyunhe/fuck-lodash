@@ -2,7 +2,10 @@
 
 You Know What I Mean.
 
-This is a more complete version than [_You Don't Need Lodash/Underscore_](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) or [_You Might Not Need Lodash_](https://youmightnotneed.com/lodash/), with additional bundle size 📦 and performance benchmark 🚀 comparsion.
+This is a more complete version than [_You Don't Need Lodash/Underscore_](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) or [_You Might Not Need Lodash_](https://youmightnotneed.com/lodash/), with additional features:
+
+- 📦 bundle size comparsion, powered by esbuild.
+- 🚀 performance benchmark, powered by vitest.
 
 ## Array
 
@@ -10,13 +13,15 @@ This is a more complete version than [_You Don't Need Lodash/Underscore_](https:
 
 ```js
 // 📦 1.87 kB (gzip)
+// 🚀 5,38 kHz
 import chunk from 'lodash/chunk';
 
 chunk(['a', 'b', 'c', 'd'], 2);
 ```
 
 ```js
-// 📦 117 B (gzip), -94%
+// 📦 117 B (gzip), 94% smaller 👍
+// 🚀 4,31 kHz, 25% slower 👎
 const chunk = (input, size) => {
   return input.reduce((arr, item, idx) => {
     return idx % size === 0
