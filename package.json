@@ -1,0 +1,65 @@
+{
+  "name": "fuck-lodash",
+  "version": "0.0.1",
+  "homepage": "https://github.com/guoyunhe/fuck-lodash#readme",
+  "bugs": {
+    "url": "https://github.com/guoyunhe/fuck-lodash/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guoyunhe/fuck-lodash.git"
+  },
+  "funding": "https://github.com/sponsors/guoyunhe",
+  "author": {
+    "name": "Guo Yunhe",
+    "email": "i@guoyunhe.me"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "style": "dist/index.css",
+  "files": [
+    "dist",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "bench": "rive benchmark",
+    "build": "rive build",
+    "build:watch": "rive build --watch",
+    "deploy": "gh-pages -d build",
+    "lint": "rive lint",
+    "lint:fix": "rive lint --fix",
+    "start": "rive start",
+    "test": "rive test",
+    "test:watch": "rive test --watch"
+  },
+  "prettier": "prettier-config-rive",
+  "eslintConfig": {
+    "extends": "eslint-config-rive/react"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-rive"
+  },
+  "devDependencies": {
+    "@mdx-js/react": "^3.0.0",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "gh-pages": "^5.0.0",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-doc-ui": "^2.2.0",
+    "react-dom": "^18.2.0",
+    "rive": "^2.0.16",
+    "typescript": "^5.3.3"
+  },
+  "rive": {
+    "template": "react",
+    "doc": {
+      "basename": "/fuck-lodash/"
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 You Know What I Mean.
 
-This is a more complete
+This is a more complete version than [_You Don't Need Lodash/Underscore_](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) or [_You Might Not Need Lodash_](https://youmightnotneed.com/lodash/), with additional bundle size 📦 and performance benchmark 🚀 comparsion.
 
 ## Array
 
@@ -10,7 +10,7 @@ This is a more complete
 
 ```js
 // 📦 1.87 kB (gzip)
-import chunk from "lodash/chunk";
+import chunk from 'lodash/chunk';
 
 chunk(['a', 'b', 'c', 'd'], 2);
 ```
@@ -32,9 +32,9 @@ chunk(['a', 'b', 'c', 'd'], 2);
 
 ```js
 // 📦 1.87 kB (gzip)
-import chunk from "lodash/chunk";
+import chunk from 'lodash/chunk';
 
-compact([0, 1, false, 2, '', 3])
+compact([0, 1, false, 2, '', 3]);
 ```
 
 ```js
@@ -58,7 +58,7 @@ chunk(['a', 'b', 'c', 'd'], 2);
 
 ```js
 // 📦 483 B (gzip)
-import now from "lodash/now";
+import now from 'lodash/now';
 
 now();
 ```
