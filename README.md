@@ -15,7 +15,7 @@ A good lodash function alternative should be both **smaller** and **faster**. In
 
 ```js
 // 📦 1.87 kB (gzip)
-// 🚀 5,38 kHz
+// 🚀 5,38 mHz
 import chunk from 'lodash/chunk';
 
 chunk(['a', 'b', 'c', 'd'], 2);
@@ -23,7 +23,7 @@ chunk(['a', 'b', 'c', 'd'], 2);
 
 ```js
 // 📦 117 B (gzip), 94% smaller 👍
-// 🚀 4,31 kHz, 25% slower 👎
+// 🚀 4,31 mHz, 25% slower 👎
 const chunk = (input, size) => {
   return input.reduce((arr, item, idx) => {
     return idx % size === 0
@@ -38,17 +38,33 @@ chunk(['a', 'b', 'c', 'd'], 2);
 ### compact
 
 ```js
-// 📦 426 kB (gzip)
-// 🚀 5,52 kHz
+// 📦 426 B (gzip)
+// 🚀 5,52 mHz
 import compact from 'lodash/compact';
 
 compact([0, 1, false, 2, '', 3]);
 ```
 
 ```js
-// 📦 53 B (gzip), -87% smaller 👍
-// 🚀 14,5 kHz, 263% faster 👍
+// 📦 53 B (gzip), 87% smaller 👍
+// 🚀 14,5 mHz, 163% faster 👍
 [0, 1, false, 2, '', 3].filter(Boolean);
+```
+
+### concat
+
+```js
+// 📦 1.27 kB (gzip)
+// 🚀 1,96 mHz
+import concat from 'lodash/concat';
+
+concat([1], 2, [3], [[4]]);
+```
+
+```js
+// 📦 45 B (gzip), 96% smaller 👍
+// 🚀 3,63 mHz, 85% faster 👍
+[1].concat(2, [3], [[4]]);
 ```
 
 ## Collection
