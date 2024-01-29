@@ -4,8 +4,10 @@ You Know What I Mean.
 
 This is a more complete version than [_You Don't Need Lodash/Underscore_](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) or [_You Might Not Need Lodash_](https://youmightnotneed.com/lodash/), with additional features:
 
-- 📦 bundle size comparsion, powered by esbuild.
-- 🚀 performance benchmark, powered by vitest.
+- 📦 bundle size comparsion, powered by [esbuild](https://esbuild.github.io/) and [bundlejs.com](https://bundlejs.com/).
+- 🚀 performance benchmark, powered by [vitest](https://vitest.dev/).
+
+A good lodash function alternative should be both **smaller** and **faster**. In some cases, here is no drop-in replacement, you have to modify your code a little bit.
 
 ## Array
 
