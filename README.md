@@ -23,7 +23,7 @@ chunk(['a', 'b', 'c', 'd'], 2);
 
 ```js
 // 📦 117 B (gzip), 94% smaller 👍
-// 🚀 4,31 mHz, 25% slower 👎
+// 🚀 4,31 mHz, 20% slower 👎
 const chunk = (input, size) => {
   return input.reduce((arr, item, idx) => {
     return idx % size === 0
