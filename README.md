@@ -15,21 +15,20 @@ A good lodash function alternative should be both **smaller** and **faster**. In
 
 ```js
 // 📦 1.87 kB (gzip)
-// 🚀 5,38 mHz
+// 🚀 5,24 mHz
 import chunk from 'lodash/chunk';
 
 chunk(['a', 'b', 'c', 'd'], 2);
 ```
 
 ```js
-// 📦 117 B (gzip), 94% smaller 👍
-// 🚀 4,31 mHz, 20% slower 👎
-const chunk = (input, size) => {
-  return input.reduce((arr, item, idx) => {
-    return idx % size === 0
-      ? [...arr, [item]]
-      : [...arr.slice(0, -1), [...arr.slice(-1)[0], item]];
-  }, []);
+// 📦 126 B (gzip), 93% smaller 👍
+// 🚀 7,41 mHz, 20% slower 👍
+const chunk = (arr, chunkSize = 1, cache = []) => {
+  const tmp = [...arr];
+  if (chunkSize <= 0) return cache;
+  while (tmp.length) cache.push(tmp.splice(0, chunkSize));
+  return cache;
 };
 
 chunk(['a', 'b', 'c', 'd'], 2);
