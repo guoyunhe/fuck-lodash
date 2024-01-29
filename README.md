@@ -13,7 +13,7 @@ A good lodash function alternative should be both **smaller** and **faster**. In
 
 ### chunk
 
-```js file
+```js filename="lodash"
 // 📦 1.87 kB (gzip)
 // 🚀 5.24 mHz
 import chunk from 'lodash/chunk';
@@ -21,7 +21,7 @@ import chunk from 'lodash/chunk';
 chunk(['a', 'b', 'c', 'd'], 2);
 ```
 
-```js
+```js filename="fuck-lodash"
 // 📦 126 B (gzip), 93% smaller 👍
 // 🚀 7.41 mHz, 20% slower 👍
 const chunk = (arr, chunkSize = 1, cache = []) => {
@@ -36,7 +36,7 @@ chunk(['a', 'b', 'c', 'd'], 2);
 
 ### compact
 
-```js
+```js filename="lodash"
 // 📦 426 B (gzip)
 // 🚀 5.52 mHz
 import compact from 'lodash/compact';
@@ -44,7 +44,7 @@ import compact from 'lodash/compact';
 compact([0, 1, false, 2, '', 3]);
 ```
 
-```js
+```js filename="fuck-lodash"
 // 📦 53 B (gzip), 87% smaller 👍
 // 🚀 14.5 mHz, 163% faster 👍
 [0, 1, false, 2, '', 3].filter(Boolean);
@@ -52,7 +52,7 @@ compact([0, 1, false, 2, '', 3]);
 
 ### concat
 
-```js
+```js filename="lodash"
 // 📦 1.27 kB (gzip)
 // 🚀 1.96 mHz
 import concat from 'lodash/concat';
@@ -60,7 +60,7 @@ import concat from 'lodash/concat';
 concat([1], 2, [3], [[4]]);
 ```
 
-```js
+```js filename="fuck-lodash"
 // 📦 45 B (gzip), 96% smaller 👍
 // 🚀 3.63 mHz, 85% faster 👍
 [1].concat(2, [3], [[4]]);
@@ -72,7 +72,7 @@ concat([1], 2, [3], [[4]]);
 
 ### now
 
-```js
+```js filename="lodash"
 // 📦 483 B (gzip)
 // 🚀 4.95 mHz
 import now from 'lodash/now';
@@ -80,7 +80,7 @@ import now from 'lodash/now';
 now();
 ```
 
-```js
+```js filename="fuck-lodash"
 // 📦 32 B (gzip), 93% smaller 👍
 // 🚀 11.4 mHz, 131% faster 👍
 Date.now();
