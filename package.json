@@ -61,5 +61,8 @@
     "doc": {
       "basename": "/fuck-lodash/"
     }
+  },
+  "dependencies": {
+    "fast-deep-equal": "^3.1.3"
   }
 }
