@@ -1,6 +1,7 @@
 {
   "name": "fuck-lodash",
   "version": "0.0.4",
+  "description": "You Know What I Mean",
   "homepage": "https://guoyunhe.github.io/fuck-lodash/",
   "bugs": {
     "url": "https://github.com/guoyunhe/fuck-lodash/issues"
@@ -42,6 +43,9 @@
   "stylelint": {
     "extends": "stylelint-config-rive"
   },
+  "dependencies": {
+    "fast-deep-equal": "^3.1.3"
+  },
   "devDependencies": {
     "@mdx-js/react": "^3.0.0",
     "@testing-library/react": "^14.1.2",
@@ -61,8 +65,5 @@
     "doc": {
       "basename": "/fuck-lodash/"
     }
-  },
-  "dependencies": {
-    "fast-deep-equal": "^3.1.3"
   }
 }
