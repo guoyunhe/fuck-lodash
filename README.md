@@ -66,6 +66,24 @@ concat([1], 2, [3], [[4]]);
 [1].concat(2, [3], [[4]]);
 ```
 
+### difference
+
+```js filename="lodash"
+// 📦 4.29 kB (gzip)
+// 🚀 2.38 mHz
+import difference from 'lodash/difference';
+
+difference([2, 1], [3, 2]);
+```
+
+```js filename="fuck-lodash"
+// 📦 77 B (gzip), 98% smaller 👍
+// 🚀 6.79 mHz, 185% faster 👍
+const difference = (arr1, arr2) => arr1.filter((x) => !arr2.includes(x));
+
+difference([2, 1], [3, 2]);
+```
+
 ## Collection
 
 ## Date
