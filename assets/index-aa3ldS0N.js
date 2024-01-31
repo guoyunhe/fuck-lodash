@@ -272,6 +272,19 @@ concat([1], 2, [3], [[4]]);
 // 🚀 3.63 mHz, 85% faster 👍
 [1].concat(2, [3], [[4]]);
 `})}),`
+`,R.jsx(t.h3,{children:"difference"}),`
+`,R.jsx(t.pre,{filename:"lodash",children:R.jsx(t.code,{className:"language-js",children:`// 📦 4.29 kB (gzip)
+// 🚀 2.38 mHz
+import difference from 'lodash/difference';
+
+difference([2, 1], [3, 2]);
+`})}),`
+`,R.jsx(t.pre,{filename:"fuck-lodash",children:R.jsx(t.code,{className:"language-js",children:`// 📦 77 B (gzip), 98% smaller 👍
+// 🚀 6.79 mHz, 185% faster 👍
+const difference = (arr1, arr2) => arr1.filter((x) => !arr2.includes(x));
+
+difference([2, 1], [3, 2]);
+`})}),`
 `,R.jsx(t.h2,{children:"Collection"}),`
 `,R.jsx(t.h2,{children:"Date"}),`
 `,R.jsx(t.h3,{children:"now"}),`
