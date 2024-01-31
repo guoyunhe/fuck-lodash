@@ -70,7 +70,7 @@ concat([1], 2, [3], [[4]]);
 
 ```js filename="lodash"
 // 📦 4.29 kB (gzip)
-// 🚀 2.38 mHz
+// 🚀 3.33 mHz
 import difference from 'lodash/difference';
 
 difference([2, 1], [3, 2]);
@@ -78,7 +78,7 @@ difference([2, 1], [3, 2]);
 
 ```js filename="fuck-lodash"
 // 📦 77 B (gzip), 98% smaller 👍
-// 🚀 6.79 mHz, 185% faster 👍
+// 🚀 12.1 mHz, 264% faster 👍
 const difference = (arr1, arr2) => arr1.filter((x) => !arr2.includes(x));
 
 difference([2, 1], [3, 2]);
@@ -88,7 +88,7 @@ difference([2, 1], [3, 2]);
 
 ```js filename="lodash"
 // 📦 9.46 kB (gzip)
-// 🚀 0.532 mHz
+// 🚀 1.05 mHz
 import differenceBy from 'lodash/differenceBy';
 
 differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor);
@@ -97,7 +97,7 @@ differenceBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], 'x');
 
 ```js filename="fuck-lodash"
 // 📦 162 B (gzip), 98% smaller 👍
-// 🚀 1.44 mHz, 171% faster 👍
+// 🚀 2.58 mHz, 146% faster 👍
 const differenceBy = (arr1, arr2, iteratee) => {
   if (typeof iteratee === 'string') {
     const prop = iteratee;
