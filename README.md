@@ -110,6 +110,28 @@ differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor);
 differenceBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], 'x');
 ```
 
+### differenceWith
+
+TODO
+
+### drop
+
+```js filename="lodash"
+// 📦 1.42 kB (gzip)
+// 🚀 4.67 mHz
+import drop from 'lodash/drop';
+
+drop([1, 2, 3], 2);
+```
+
+```js filename="fuck-lodash"
+// 📦 60 B (gzip), 96% smaller 👍
+// 🚀 9.67 mHz, 107% faster 👍
+const drop = (arr, n = 1) => arr.slice(n);
+
+drop([1, 2, 3], 2);
+```
+
 ## Collection
 
 ## Date
