@@ -44,12 +44,14 @@
     "extends": "stylelint-config-rive"
   },
   "dependencies": {
+    "nano-memoize": "^3.0.16",
     "react-fast-compare": "^3.2.2"
   },
   "devDependencies": {
     "@mdx-js/react": "^3.0.0",
     "@testing-library/react": "^14.2.0",
     "@testing-library/user-event": "^14.5.2",
+    "@types/lodash": "^4.14.202",
     "@types/react": "^18.2.51",
     "@types/react-dom": "^18.2.18",
     "gh-pages": "^5.0.0",
