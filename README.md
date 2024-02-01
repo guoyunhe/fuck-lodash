@@ -169,12 +169,10 @@ isEqual({ a: 1, b: 2 }, { b: 2, a: 1 });
 ```js filename="fuck-lodash"
 // 📦 609 B (gzip), 91% smaller 👍
 // 🚀 4.16 mHz, 158% faster 👍
-import isEqual from 'fast-deep-equal';
+import isEqual from 'react-fast-compare';
 
 isEqual({ a: 1, b: 2 }, { b: 2, a: 1 });
 ```
-
-If you are using `isEqual` in React, try `react-fast-compare` which is a fork of `fast-deep-equal` optimized for React.
 
 ## Math
 
