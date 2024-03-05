@@ -160,7 +160,7 @@ Date.now();
 
 ```js filename="lodash"
 // 📦 7.38 kB (gzip)
-// 🚀 0.36 mHz
+// 🚀 0.39 mHz
 import cloneDeep from 'lodash/cloneDeep';
 
 const obj = {
@@ -181,12 +181,40 @@ const obj = {
 cloneDeep(obj);
 ```
 
+[rfdc](https://www.npmjs.com/package/rfdc) is a fully featured alternative of `lodash/deepClone`.
+But it is bigger in size compared to other alternative.
+
 ```js filename="fuck-lodash"
 // 📦 1.15 kB (gzip), 84.4% smaller 👍
-// 🚀 1.10 mHz, 204% faster 👍
+// 🚀 1.06 mHz, 172% faster 👍
 import rfdc from 'rfdc';
 
 const cloneDeep = rfdc();
+
+const obj = {
+  string: 'abcdef',
+  number: 123.456,
+  array: [
+    {
+      name: 'WebInspector',
+      version: '537.36',
+    },
+    {
+      name: 'WebInspector',
+      version: '537.36',
+    },
+  ],
+};
+
+cloneDeep(obj);
+```
+
+If you only need to clone simple JSON data (no symbols, prototypes, etc.), [klona/json](https://www.npmjs.com/package/klona) is a lighter choice.
+
+```js filename="fuck-lodash"
+// 📦 0.31 kB (gzip), 95.8% smaller 👍
+// 🚀 2.19 mHz, 456% faster 👍
+import { klona as cloneDeep } from 'klona/json';
 
 const obj = {
   string: 'abcdef',

@@ -1,3 +1,4 @@
+import { klona } from 'klona/json';
 import cloneDeep from 'lodash/cloneDeep';
 import rfdc from 'rfdc';
 import { bench } from 'vitest';
@@ -23,6 +24,10 @@ bench('lodash', () => {
   cloneDeep(obj);
 });
 
-bench('fuck lodash', () => {
+bench('rfdc', () => {
   clone(obj);
+});
+
+bench('klona/json', () => {
+  klona(obj);
 });

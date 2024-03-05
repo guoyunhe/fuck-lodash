@@ -45,6 +45,7 @@
     "extends": "stylelint-config-rive"
   },
   "dependencies": {
+    "klona": "^2.0.6",
     "nano-memoize": "^3.0.16",
     "react-fast-compare": "^3.2.2",
     "rfdc": "^1.3.1"
