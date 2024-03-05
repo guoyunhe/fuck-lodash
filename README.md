@@ -156,6 +156,56 @@ Date.now();
 
 ## Lang
 
+### cloneDeep
+
+```js filename="lodash"
+// 📦 7.38 kB (gzip)
+// 🚀 0.36 mHz
+import cloneDeep from 'lodash/cloneDeep';
+
+const obj = {
+  string: 'abcdef',
+  number: 123.456,
+  array: [
+    {
+      name: 'WebInspector',
+      version: '537.36',
+    },
+    {
+      name: 'WebInspector',
+      version: '537.36',
+    },
+  ],
+};
+
+cloneDeep(obj);
+```
+
+```js filename="fuck-lodash"
+// 📦 1.15 kB (gzip), 84.4% smaller 👍
+// 🚀 1.10 mHz, 204% faster 👍
+import rfdc from 'rfdc';
+
+const cloneDeep = rfdc();
+
+const obj = {
+  string: 'abcdef',
+  number: 123.456,
+  array: [
+    {
+      name: 'WebInspector',
+      version: '537.36',
+    },
+    {
+      name: 'WebInspector',
+      version: '537.36',
+    },
+  ],
+};
+
+cloneDeep(obj);
+```
+
 ### isEqual
 
 ```js filename="lodash"
